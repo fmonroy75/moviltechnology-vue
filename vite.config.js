@@ -2,7 +2,6 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   resolve: {
@@ -10,57 +9,41 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // IMPORTANTE: Usa el nombre EXACTO de tu repositorio
+  // Si tu repo se llama "moviltechnology-vue" (con guión)
+  base: "/moviltechnology-vue/",
+
+  // Si tu repo tiene otro nombre, cámbialo:
+  // base: '/nombre-exacto-del-repo/',
+
   build: {
-    // Carpeta de salida (por defecto es 'dist')
     outDir: "dist",
-
-    // Limpiar la carpeta antes de construir
     emptyOutDir: true,
-
-    // Generar source maps para producción (opcional)
     sourcemap: false,
+    minify: "esbuild",
 
-    // Tamaño máximo de chunk advetencia (en kB)
-    chunkSizeWarningLimit: 1000,
+    // Configuración de assets
+    assetsDir: "assets",
 
-    // Opciones de minificación
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true, // Eliminar console.log en producción
-        drop_debugger: true,
-      },
-    },
-
-    // Configuración de chunks para optimización
     rollupOptions: {
       output: {
-        // Manual chunks para separar vendor
-        manualChunks(id) {
-          if (id.includes("node_modules")) {
-            // Separar Vuetify en su propio chunk
-            if (id.includes("vuetify")) {
-              return "vendor-vuetify";
-            }
-            // El resto de node_modules
-            return "vendor";
-          }
-        },
-
-        // Nombres de archivos personalizados
+        // Rutas relativas al base
         entryFileNames: "assets/js/[name]-[hash].js",
         chunkFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
+
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("vuetify")) {
+              return "vendor-vuetify";
+            }
+            if (id.includes("vue")) {
+              return "vendor-vue";
+            }
+            return "vendor";
+          }
+        },
       },
     },
   },
-
-  // Configuración del servidor de desarrollo
-  server: {
-    port: 3000,
-    open: true,
-  },
-
-  // Base URL para producción (útil si se despliega en subdirectorio)
-  base: "/",
 });
