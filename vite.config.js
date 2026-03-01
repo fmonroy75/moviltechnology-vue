@@ -11,7 +11,8 @@ export default defineConfig({
   },
   // IMPORTANTE: Usa el nombre EXACTO de tu repositorio
   // Si tu repo se llama "moviltechnology-vue" (con guión)
-  base: "/moviltechnology-vue/",
+  //base: "/moviltechnology-vue/",
+  base: "/",
 
   // Si tu repo tiene otro nombre, cámbialo:
   // base: '/nombre-exacto-del-repo/',
