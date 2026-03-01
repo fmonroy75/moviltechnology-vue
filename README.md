@@ -259,33 +259,6 @@ npm run preview
 npm run deploy
 ```
 
----
-
-## 🤝 Contribuciones
-
-1.  Fork del proyecto
-2.  Crear rama
-
-```bash
-git checkout -b feature/AmazingFeature
-```
-
-3.  Commit
-
-```bash
-git commit -m "Add AmazingFeature"
-```
-
-4.  Push
-
-```bash
-git push origin feature/AmazingFeature
-```
-
-5.  Crear Pull Request
-
----
-
 ## 📄 Licencia
 
 Licencia **MIT**
@@ -298,25 +271,8 @@ Licencia **MIT**
 IngeniumBright
 
 Website: www.ingeniumbright.com\
-GitHub: @franciscomonroy
+GitHub: @fmonroy75
 
 ---
 
-## 📞 Contacto
-
-WhatsApp: +54 9 11 1234-5678\
-Email: servicio@moviltechnology.com
-
----
-
-## 🎯 Roadmap
-
-- Backend integration
-- Carrito de compras
-- Sistema de citas online
-- Blog tecnológico
-- Multi-idioma (ES / EN)
-
----
-
-## ❤️ Desarrollado por IngeniumBright
+## Desarrollado por IngeniumBright
