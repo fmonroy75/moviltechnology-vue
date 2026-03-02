@@ -87,7 +87,7 @@
 import { computed } from "vue";
 
 const whatsappRepairLink =
-  "https://wa.me/5491112345678?text=Hola%20MovilTechnology,%20necesito%20reparar%20mi%20celular";
+  "https://wa.me/56988964877?text=Hola%20MovilTechnology,%20necesito%20reparar%20mi%20celular";
 
 const brands = [
   { icon: "fa-brands fa-apple", text: "iPhone" }, // Para Font Awesome

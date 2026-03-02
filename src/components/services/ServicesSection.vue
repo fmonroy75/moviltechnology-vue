@@ -64,7 +64,7 @@
 import ServiceCard from "./ServiceCard.vue";
 
 const whatsappCTA =
-  "https://wa.me/5491112345678?text=Hola%20MovilTechnology,%20necesito%20presupuesto%20para%20reparar%20mi%20celular";
+  "https://wa.me/56988964877?text=Hola%20MovilTechnology,%20necesito%20presupuesto%20para%20reparar%20mi%20celular";
 
 const features = [
   {
@@ -155,7 +155,9 @@ const detailedServices = [
 <style scoped>
 .feature-card {
   border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .feature-card:hover {

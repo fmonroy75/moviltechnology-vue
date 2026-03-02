@@ -42,7 +42,7 @@
                 <v-icon color="green" class="mr-2">mdi-whatsapp</v-icon>
               </template>
               <v-list-item-title class="text-grey-lighten-1">
-                WhatsApp: +54 9 11 1234-5678
+                WhatsApp: +569 8896 48 77
               </v-list-item-title>
             </v-list-item>
 
@@ -90,8 +90,8 @@
 <script setup>
 import logo from "@/assets/img/movil.png";
 
-const whatsappLink = "https://wa.me/5491112345678";
-const email = "servicio@moviltechnology.com";
+const whatsappLink = "https://wa.me/56988964877";
+const email = "victoriof1987@gmail.com";
 
 const services = [
   { text: "Reparación de placas", href: "#servicios" },

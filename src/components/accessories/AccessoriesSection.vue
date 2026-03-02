@@ -57,7 +57,7 @@
 import AccessoryCard from "./AccessoryCard.vue";
 
 const whatsappCTA =
-  "https://wa.me/5491112345678?text=Hola%20MovilTechnology,%20quiero%20consultar%20sobre%20accesorios%20para%20mi%20celular";
+  "https://wa.me/56988964877?text=Hola%20MovilTechnology,%20quiero%20consultar%20sobre%20accesorios%20para%20mi%20celular";
 
 const accessories = [
   {

@@ -24,7 +24,7 @@ const hover = ref(false);
 const showBadge = ref(true);
 
 const whatsappLink =
-  "https://wa.me/5491112345678?text=Hola%20MovilTechnology,%20necesito%20información%20sobre%20reparación%20de%20celulares%20o%20accesorios";
+  "https://wa.me/56988964877?text=Hola%20MovilTechnology,%20necesito%20información%20sobre%20reparación%20de%20celulares%20o%20accesorios";
 </script>
 
 <style scoped>

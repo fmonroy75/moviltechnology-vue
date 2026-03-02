@@ -126,8 +126,8 @@
 import { ref } from "vue";
 
 const whatsappLink =
-  "https://wa.me/5491112345678?text=Hola%20MovilTechnology,%20necesito%20información%20sobre%3A";
-const email = ref("servicio@moviltechnology.com");
+  "https://wa.me/56988964877?text=Hola%20MovilTechnology,%20necesito%20información%20sobre%3A";
+const email = ref("victoriof1987@gmail.com");
 const showSnackbar = ref(false);
 const copied = ref(false);
 
