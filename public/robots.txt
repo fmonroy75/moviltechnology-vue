@@ -1,0 +1,5 @@
+# MovilTechnology — cambia la URL del Sitemap si tu dominio de producción es otro
+User-agent: *
+Allow: /
+
+Sitemap: https://moviltechnology.ingeniumbright.com/sitemap.xml
