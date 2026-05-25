@@ -2,26 +2,53 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============================================================
+         FAVICONS & ICONOS — todos los archivos van en /public/
+    ============================================================ -->
+    <!-- Favicon clásico (browsers modernos prefieren SVG) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Fallback ICO para IE / Edge legacy -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- PNG específicos por tamaño -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- Apple Touch Icon (iOS homescreen, iMessage, etc.) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Windows tiles -->
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <!-- Color de barra en Android / Safari iOS -->
+    <meta name="theme-color" content="#2563eb" />
+
+    <!-- ============================================================
+         SEO PRIMARIO
+    ============================================================ -->
     <title>
       MovilTechnology | Servicio Técnico y Accesorios para Celulares
     </title>
     <meta
       name="description"
-      content="Servicio técnico de celulares y venta de accesorios: reparación de placas, pantallas, baterías y cámaras. Repuestos iPhone y Android, fundas y cargadores. Consulta por WhatsApp."
+      content="Servicio técnico profesional de celulares y venta de accesorios en Latinoamérica. Reparación de placas, pantallas, baterías y cámaras. Repuestos iPhone y Android. Fundas, cargadores y más. Consulta por WhatsApp."
     />
     <meta
       name="keywords"
-      content="reparación celulares, servicio técnico móvil, accesorios celular, pantallas iPhone, baterías, MovilTechnology"
+      content="reparación celulares, servicio técnico móvil, accesorios celular, pantallas iPhone, baterías Android, MovilTechnology, repuestos smartphone"
     />
     <meta name="author" content="Francisco Monroy - IngeniumBright" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
     <meta name="googlebot" content="index, follow" />
-    <meta name="theme-color" content="#2563eb" />
     <link rel="canonical" href="https://moviltechnology.ingeniumbright.com/" />
 
-    <!-- Open Graph -->
+    <!-- ============================================================
+         OPEN GRAPH — Facebook, LinkedIn, WhatsApp, Telegram
+    ============================================================ -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="MovilTechnology" />
@@ -31,19 +58,30 @@
     />
     <meta
       property="og:description"
-      content="Reparación profesional de smartphones y accesorios: placas, pantallas, baterías, desbloqueos y más. iPhone y Android."
+      content="Reparación profesional de smartphones y accesorios: placas, pantallas, baterías, desbloqueos y más. iPhone y Android. Consulta disponibilidad por WhatsApp."
     />
-    <meta property="og:url" content="https://moviltechnology.ingeniumbright.com/" />
+    <meta
+      property="og:url"
+      content="https://moviltechnology.ingeniumbright.com/"
+    />
+    <!-- RECOMENDADO: reemplaza esta URL por una imagen propia alojada en tu dominio (1200×630px) -->
     <meta
       property="og:image"
-      content="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+      content="https://moviltechnology.ingeniumbright.com/og-image.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Técnico reparando un smartphone" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta
+      property="og:image:alt"
+      content="MovilTechnology – Servicio técnico y accesorios para celulares"
+    />
 
-    <!-- Twitter -->
+    <!-- ============================================================
+         TWITTER / X CARDS
+    ============================================================ -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@MovilTechnology" />
     <meta
       name="twitter:title"
       content="MovilTechnology | Servicio Técnico y Accesorios para Celulares"
@@ -54,17 +92,77 @@
     />
     <meta
       name="twitter:image"
-      content="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80"
+      content="https://moviltechnology.ingeniumbright.com/og-image.jpg"
     />
-    <meta name="twitter:image:alt" content="Técnico reparando un smartphone" />
+    <meta
+      name="twitter:image:alt"
+      content="MovilTechnology – Servicio técnico y accesorios para celulares"
+    />
 
-    <!-- Google Fonts -->
+    <!-- ============================================================
+         SCHEMA.ORG — Datos estructurados (Google Rich Results)
+    ============================================================ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "@id": "https://moviltechnology.ingeniumbright.com/#business",
+            "name": "MovilTechnology",
+            "description": "Servicio técnico profesional de celulares y venta de accesorios. Reparación de placas, pantallas, baterías y cámaras. Repuestos iPhone y Android.",
+            "url": "https://moviltechnology.ingeniumbright.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://moviltechnology.ingeniumbright.com/android-chrome-512x512.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://moviltechnology.ingeniumbright.com/og-image.jpg",
+            "priceRange": "$$",
+            "currenciesAccepted": "USD",
+            "paymentAccepted": "Cash, Credit Card, Transferencia",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "availableLanguage": "Spanish"
+            },
+            "sameAs": []
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://moviltechnology.ingeniumbright.com/#website",
+            "url": "https://moviltechnology.ingeniumbright.com/",
+            "name": "MovilTechnology",
+            "description": "Servicio técnico de celulares y venta de accesorios",
+            "inLanguage": "es",
+            "publisher": {
+              "@id": "https://moviltechnology.ingeniumbright.com/#business"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://moviltechnology.ingeniumbright.com/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- ============================================================
+         PERFORMANCE — Preconnects & Google Fonts
+    ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- DNS prefetch para recursos externos comunes -->
+    <link rel="dns-prefetch" href="https://wa.me" />
   </head>
   <body>
     <div id="app"></div>
