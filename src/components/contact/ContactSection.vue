@@ -116,6 +116,65 @@
               </v-card>
             </v-col>
           </v-row>
+
+          <!-- Mapa de Google sin API -->
+          <v-row class="mt-12">
+            <v-col cols="12">
+              <v-card class="map-card" elevation="4">
+                <v-card-title class="text-h5 font-weight-bold pa-4 bg-primary">
+                  <v-icon start size="28" color="white">mdi-map-marker</v-icon>
+                  <span class="text-white">Nuestra Ubicación</span>
+                </v-card-title>
+
+                <v-card-text class="pa-0">
+                  <div class="map-container">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.231873796995!2d-71.5615079!3d-33.0240211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689ddfd397d1dab%3A0x4ffc8400e59b70f6!2sVon%20Schroeder%20220%2C%202520000%20Vi%C3%B1a%20del%20Mar%2C%20Valpara%C3%ADso%2C%20Chile!5e0!3m2!1ses!2sca!4v1779898193081!5m2!1ses!2sca"
+                      width="600"
+                      height="450"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
+
+                  <div class="address-container pa-4">
+                    <div class="d-flex align-center justify-center">
+                      <v-icon color="primary" class="mr-2">mdi-map-marker</v-icon>
+                      <span class="text-body-1 font-weight-medium">
+                        von Shoeders 220, Valparaíso, Chile
+                      </span>
+                    </div>
+
+                    <div class="d-flex justify-center mt-3 gap-2">
+                      <v-btn
+                        :href="directionsLink"
+                        target="_blank"
+                        color="primary"
+                        variant="outlined"
+                        size="small"
+                        prepend-icon="mdi-directions"
+                      >
+                        Cómo llegar
+                      </v-btn>
+
+                      <v-btn
+                        :href="googleMapsLink"
+                        target="_blank"
+                        color="primary"
+                        variant="text"
+                        size="small"
+                        prepend-icon="mdi-open-in-new"
+                      >
+                        Ver en Google Maps
+                      </v-btn>
+                    </div>
+                  </div>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -130,6 +189,14 @@ const whatsappLink =
 const email = ref("victoriof1987@gmail.com");
 const showSnackbar = ref(false);
 const copied = ref(false);
+
+// Dirección para el mapa
+const address = "von Shoeders 220, Valparaíso, Chile";
+const encodedAddress = encodeURIComponent(address);
+
+// URLs de Google Maps sin API
+const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+const directionsLink = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
 
 const copyEmail = async () => {
   try {
@@ -186,5 +253,51 @@ const copyEmail = async () => {
 .info-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.map-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.map-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: #f5f5f5;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.address-container {
+  background: rgba(var(--v-theme-surface), 0.5);
+  border-top: 1px solid rgba(var(--v-theme-primary), 0.1);
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .map-container {
+    height: 300px;
+  }
+
+  .address-container .d-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 </style>
